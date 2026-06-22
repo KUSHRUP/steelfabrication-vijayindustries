@@ -1,0 +1,653 @@
+/* ==========================================================================
+   VIJAY INDUSTRIES - HOME PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+/* 1. Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--color-iron-black);
+}
+
+.hero-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.1);
+  transform: scale(1.05);
+  animation: slowZoom 20s ease-out forwards;
+}
+
+@keyframes slowZoom {
+  to {
+    transform: scale(1);
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(17, 24, 39, 0.4), var(--color-iron-black) 80%);
+}
+
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.hero-text-content {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--color-light-steel);
+  margin-bottom: 40px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .hero-ctas {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-light-steel);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  font-family: var(--font-heading);
+}
+
+.scroll-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  animation: scrollPulse 1.8s infinite ease-in-out;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(15px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* 2. Statement Section */
+.statement-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .statement-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.statement-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .statement-title {
+    font-size: 2.2rem;
+  }
+}
+
+.statement-desc-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.statement-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.btn-text {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-text:hover {
+  color: var(--text-primary);
+}
+
+.btn-text svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-text:hover svg {
+  transform: translateX(6px);
+}
+
+/* 3. Services Preview Section */
+.section-tag {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 40px;
+  position: relative;
+  transition: var(--transition-smooth);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.service-card-num {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: var(--bg-primary);
+  opacity: 0.15;
+  transition: var(--transition-smooth);
+}
+
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border: 1px solid var(--border-color);
+  color: var(--accent);
+  transition: var(--transition-smooth);
+}
+
+.service-icon-box svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.service-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  transition: var(--transition-smooth);
+}
+
+.service-card-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.service-card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+/* Service Card Hover States */
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.service-card:hover .service-card-num {
+  color: var(--accent);
+  opacity: 0.2;
+}
+
+.service-card:hover .service-icon-box {
+  background-color: var(--accent);
+  color: var(--color-white);
+  border-color: var(--accent);
+}
+
+.service-card:hover .service-card-title {
+  color: var(--accent);
+}
+
+/* 4. Manufacturing Process (Timeline) */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.timeline-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: var(--accent);
+  z-index: 2;
+  transition: height 0.1s linear;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 60px;
+  z-index: 3;
+}
+
+/* Left item style */
+.timeline-item:nth-child(even) {
+  left: 0;
+  text-align: right;
+}
+
+/* Right item style */
+.timeline-item:nth-child(odd) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 3px solid var(--border-color);
+  z-index: 4;
+  transition: var(--transition-smooth);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  left: -8px;
+}
+
+.timeline-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  transition: var(--transition-smooth);
+}
+
+.timeline-content:hover {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.step-num {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.timeline-content p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Scroll Active timeline animations */
+.timeline-item.revealed .timeline-dot {
+  background-color: var(--accent);
+  border-color: var(--bg-primary);
+  box-shadow: 0 0 0 4px rgba(139, 94, 60, 0.3);
+}
+
+/* Timeline Mobile Layout */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding: 20px 20px 20px 50px;
+    text-align: left !important;
+  }
+  
+  .timeline-dot {
+    left: 12px !important;
+    right: auto !important;
+  }
+}
+
+/* 5. Projects Parallax Showcase */
+.parallax-project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.parallax-project-card {
+  position: relative;
+  width: 100%;
+  height: 550px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .parallax-project-card {
+    height: 400px;
+  }
+}
+
+.project-parallax-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax-image {
+  width: 100%;
+  height: 130%; /* Taller for vertical movement inside viewport */
+  object-fit: cover;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  filter: brightness(0.65);
+  transition: transform 0.5s ease-out;
+}
+
+.project-info-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(transparent, rgba(17, 24, 39, 0.9));
+  z-index: 2;
+}
+
+.project-info-content {
+  max-width: 600px;
+}
+
+.proj-category {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.project-info-content h3 {
+  font-size: 2.2rem;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .project-info-content h3 {
+    font-size: 1.6rem;
+  }
+}
+
+.project-info-content p {
+  color: var(--color-light-steel);
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+/* 6. Statistics Section */
+.stats-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-num {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-num::after {
+  content: '+';
+  font-weight: 300;
+}
+
+.stat-item:last-child .stat-num::after {
+  content: 't+';
+  font-size: 2.5rem;
+  vertical-align: super;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* 7. Call To Action Section */
+.cta-section {
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-color: rgba(139, 94, 60, 0.03);
+  filter: blur(120px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .cta-title {
+    font-size: 2.2rem;
+  }
+}
+
+.cta-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-weight: 300;
+}

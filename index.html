@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Steel. Built To Last. | Vijay Industries</title>
+  <meta name="description" content="Vijay Industries is a premier steel fabrication and heavy engineering company based in India. Custom steel structures, industrial fabrication, and custom manufacturing.">
+  
+  <!-- Global Stylesheet -->
+  <link rel="stylesheet" href="css/global.css">
+  <!-- Page Specific Stylesheet -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="loader-logo">VIJAY <span>INDUSTRIES</span></div>
+    <div class="loader-bar-container">
+      <div class="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div id="page-transition-overlay" class="page-transition-overlay"></div>
+
+  <!-- Sticky Navbar Header -->
+  <header class="header" id="main-header">
+    <div class="container">
+      <a href="index.html" class="logo" id="header-logo-link">
+        <img src="assets/vijay industries logo.jpg" alt="Vijay Industries Logo" id="logo-image" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      
+      <!-- Nav Links -->
+      <nav class="nav-menu" id="nav-menu-list">
+        <a href="index.html" class="nav-link active" id="nav-home">Home</a>
+        <a href="about.html" class="nav-link" id="nav-about">About</a>
+        
+        <!-- Services with Mega Menu -->
+        <div class="nav-link has-megamenu" id="nav-services-megamenu">
+          <span class="megamenu-mobile-toggle">Services <svg style="width: 10px; height: 10px; margin-left: 5px; fill: currentColor;" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg></span>
+          <div class="megamenu">
+            <div class="container">
+              <div class="megamenu-grid">
+                <div class="megamenu-brand-panel">
+                  <h3>Vijay Industries</h3>
+                  <p>Quality fabrication and engineering solutions delivering unmatched strength and structural integrity since day one.</p>
+                  <a href="services.html" class="btn btn-outline-accent" style="padding: 10px 20px; font-size: 0.8rem;" id="megamenu-services-btn">All Services</a>
+                </div>
+                <div class="megamenu-col">
+                  <h4>Vijay Steel</h4>
+                  <ul class="megamenu-links">
+                    <li><a href="services.html#structural" id="mega-link-structural">Structural Steel Work</a></li>
+                    <li><a href="services.html#industrial" id="mega-link-industrial">Industrial Fabrication</a></li>
+                    <li><a href="services.html#heavy" id="mega-link-heavy">Heavy Engineering</a></li>
+                    <li><a href="services.html#custom" id="mega-link-custom">Custom Manufacturing</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-col">
+                  <h4>DriveOn Division</h4>
+                  <ul class="megamenu-links">
+                    <li><a href="driveon.html" id="mega-link-driveon-all">Automotive Accessories</a></li>
+                    <li><a href="driveon.html#products" id="mega-link-driveon-trays">Music Trays & Boxes</a></li>
+                    <li><a href="driveon.html#products" id="mega-link-driveon-armrests">Premium Armrests</a></li>
+                    <li><a href="driveon.html#products" id="mega-link-driveon-rings">Speaker Mounting</a></li>
+                  </ul>
+                </div>
+                <div class="megamenu-col">
+                  <h4>Quick Links</h4>
+                  <ul class="megamenu-links">
+                    <li><a href="projects.html" id="mega-link-projects">Featured Projects</a></li>
+                    <li><a href="about.html#infrastructure" id="mega-link-infrastructure">Infrastructure</a></li>
+                    <li><a href="contact.html" id="mega-link-contact">Get a Quote</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="projects.html" class="nav-link" id="nav-projects">Projects</a>
+        <a href="driveon.html" class="nav-link" id="nav-driveon" style="color: var(--accent); font-weight: 700;">DriveOn</a>
+        <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Header Action Items -->
+      <div class="header-actions">
+        <!-- Light/Dark Mode Switcher -->
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle light/dark theme">
+          <svg class="moon-icon" viewBox="0 0 24 24"><path d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"/></svg>
+          <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2A1,1 0 0,1 13,3V5A1,1 0 0,1 11,5V3A1,1 0 0,1 12,2M12,19A1,1 0 0,1 13,20V22A1,1 0 0,1 11,22V20A1,1 0 0,1 12,19M2,12A1,1 0 0,1 3,11H5A1,1 0 0,1 5,13H3A1,1 0 0,1 2,12M19,12A1,1 0 0,1 20,11H22A1,1 0 0,1 22,13H20A1,1 0 0,1 19,12M6.22,5.22A1,1 0 0,1 7.64,5.22L9.05,6.64A1,1 0 0,1 7.64,8.05L6.22,6.64A1,1 0 0,1 6.22,5.22M14.95,13.95A1,1 0 0,1 16.36,13.95L17.78,15.36A1,1 0 0,1 16.36,16.78L14.95,15.36A1,1 0 0,1 14.95,13.95M6.22,17.78A1,1 0 0,1 6.22,16.36L7.64,14.95A1,1 0 0,1 9.05,16.36L7.64,17.78A1,1 0 0,1 6.22,17.78M14.95,6.64A1,1 0 0,1 16.36,5.22L17.78,6.64A1,1 0 0,1 16.36,8.05L14.95,6.64A1,1 0 0,1 14.95,6.64Z"/></svg>
+        </button>
+
+        <!-- Hamburger Icon for Mobile -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home-hero">
+      <div class="hero-bg-container">
+        <!-- Visual Backdrop representing industrial welding/fabrication -->
+        <img class="hero-bg-image" src="images/steel_fabrication_hero.png" alt="Steel Fabrication Cinematic Backdrop">
+        <div class="hero-overlay"></div>
+      </div>
+      
+      <div class="container hero-content-wrapper">
+        <div class="hero-text-content">
+          <h1 class="hero-title reveal" id="hero-title-h1">Precision Steel.<br>Built To Last.</h1>
+          <p class="hero-subtitle reveal" style="transition-delay: 0.15s;" id="hero-subheadline-p">Custom steel fabrication solutions engineered for strength, accuracy and reliability.</p>
+          <div class="hero-ctas reveal" style="transition-delay: 0.3s;">
+            <a href="services.html" class="btn btn-primary" id="hero-cta-services">Explore Services</a>
+            <a href="contact.html" class="btn btn-secondary" id="hero-cta-contact">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <span>SCROLL TO EXPLORE</span>
+        <div class="scroll-dot"></div>
+      </div>
+    </section>
+
+    <!-- Large Statement & Intro Section -->
+    <section class="section statement-section" id="company-statement">
+      <div class="container">
+        <div class="statement-grid">
+          <div class="reveal-left">
+            <h2 class="statement-title" id="statement-heading">Transforming steel into structures that stand the test of time.</h2>
+          </div>
+          <div class="reveal-right statement-desc-col">
+            <p class="statement-description">
+              For over two decades, Vijay Industries has been a pioneer in high-precision steel fabrication and heavy engineering in India. We combine advanced machinery, skilled craftsmanship, and meticulous engineering to deliver customized solutions for heavy industries, commercial infrastructure, and custom projects.
+            </p>
+            <a href="about.html" class="btn-text" id="statement-about-preview">About Vijay Industries <svg style="width: 16px; height: 16px; margin-left: 8px; fill: currentColor; vertical-align: middle;" viewBox="0 0 24 24"><path d="M4,11H16.17L10.58,5.41L12,4L20,12L12,20L10.58,18.59L16.17,13H4V11Z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="section services-section" id="services-preview">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">Capabilities</span>
+          <h2 class="section-title">Core Services</h2>
+        </div>
+
+        <div class="services-grid stagger-container">
+          
+          <!-- Service Card 1 -->
+          <div class="service-card stagger-item" id="srv-card-1">
+            <div class="service-card-num">01</div>
+            <div class="service-icon-box">
+              <!-- Custom Minimal Icon -->
+              <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+            </div>
+            <h3 class="service-card-title">Industrial Fabrication</h3>
+            <p class="service-card-desc">Robust fabrication of ducts, silos, storage tanks, chimneys, and complex modular skids built to exact industrial grades.</p>
+            <a href="services.html#industrial" class="service-card-link" aria-label="Learn more about Industrial Fabrication"></a>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div class="service-card stagger-item" id="srv-card-2">
+            <div class="service-card-num">02</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2L2 22h20L12 2zm0 3.99L19.53 19H4.47L12 5.99zM13 16h-2v2h2v-2zm0-6h-2v4h2v-4z"/></svg>
+            </div>
+            <h3 class="service-card-title">Structural Steel Work</h3>
+            <p class="service-card-desc">Heavy-duty structural framework, trusses, columns, and staging structures optimized for safety and durability.</p>
+            <a href="services.html#structural" class="service-card-link" aria-label="Learn more about Structural Steel Work"></a>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div class="service-card stagger-item" id="srv-card-3">
+            <div class="service-card-num">03</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            </div>
+            <h3 class="service-card-title">Heavy Engineering</h3>
+            <p class="service-card-desc">Comprehensive engineering support for high-capacity equipment, machine bases, and material handling systems.</p>
+            <a href="services.html#heavy" class="service-card-link" aria-label="Learn more about Heavy Engineering"></a>
+          </div>
+
+          <!-- Service Card 4 -->
+          <div class="service-card stagger-item" id="srv-card-4">
+            <div class="service-card-num">04</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
+            </div>
+            <h3 class="service-card-title">Custom Manufacturing</h3>
+            <p class="service-card-desc">Bespoke metal products built with tight tolerances, tailored specifically for distinct technical specifications.</p>
+            <a href="services.html#custom" class="service-card-link" aria-label="Learn more about Custom Manufacturing"></a>
+          </div>
+
+          <!-- Service Card 5 -->
+          <div class="service-card stagger-item" id="srv-card-5">
+            <div class="service-card-num">05</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.07 19.58 10.48 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-8h-2v3H8v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+            </div>
+            <h3 class="service-card-title">Welding Solutions</h3>
+            <p class="service-card-desc">Certified MIG, TIG, and MMAW welding processes ensuring strong, high-integrity joints verified by non-destructive testing.</p>
+            <a href="services.html#custom" class="service-card-link" aria-label="Learn more about Welding Solutions"></a>
+          </div>
+
+          <!-- Service Card 6 -->
+          <div class="service-card stagger-item" id="srv-card-6">
+            <div class="service-card-num">06</div>
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+            </div>
+            <h3 class="service-card-title">Project Execution</h3>
+            <p class="service-card-desc">End-to-end management from planning, heavy logistics, onsite structural assembly, and final handover.</p>
+            <a href="services.html#engineering" class="service-card-link" aria-label="Learn more about Project Execution"></a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Manufacturing Process Section (Timeline) -->
+    <section class="section process-section" id="manufacturing-process">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">Methodology</span>
+          <h2 class="section-title">Manufacturing Process</h2>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Central progress bar line -->
+          <div class="timeline-line">
+            <div class="timeline-progress" id="timeline-progress-bar"></div>
+          </div>
+
+          <!-- Step 1: Design -->
+          <div class="timeline-item reveal" id="step-design">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">01</span>
+              <h3>Design & Engineering Review</h3>
+              <p>We analyze drawings and CAD models, reviewing structural requirements, weld configurations, and tolerances to ensure accurate pre-fabrication planning.</p>
+            </div>
+          </div>
+
+          <!-- Step 2: Engineering -->
+          <div class="timeline-item reveal" id="step-engineering">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">02</span>
+              <h3>Material Engineering</h3>
+              <p>Sourcing premium structural steel plates, sections, and welding consumables. Materials undergo chemical and mechanical testing to guarantee tensile strength.</p>
+            </div>
+          </div>
+
+          <!-- Step 3: Fabrication -->
+          <div class="timeline-item reveal" id="step-fabrication">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">03</span>
+              <h3>Precision Fabrication</h3>
+              <p>Cutting, shearing, plate bending, and high-precision welding execute the core fabrication block, strictly adhering to certified standards.</p>
+            </div>
+          </div>
+
+          <!-- Step 4: Finishing -->
+          <div class="timeline-item reveal" id="step-finishing">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">04</span>
+              <h3>Surface Treatment & Finishing</h3>
+              <p>Blasting and coating application protect the fabrications from corrosion, ensuring long-term surface durability for demanding environments.</p>
+            </div>
+          </div>
+
+          <!-- Step 5: Delivery -->
+          <div class="timeline-item reveal" id="step-delivery">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="step-num">05</span>
+              <h3>Rigorous Inspection & Delivery</h3>
+              <p>Non-destructive weld testing, dimensional inspection, and assembly trials precede logistics dispatch and secure site delivery.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Parallax Projects Showcase Section -->
+    <section class="section projects-showcase-section" id="projects-showcase">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+        </div>
+      </div>
+
+      <div class="parallax-project-container">
+        
+        <!-- Project 1 -->
+        <div class="parallax-project-card reveal" id="proj-show-1">
+          <div class="project-parallax-wrapper">
+            <img src="images/steel_fabrication_hero.png" alt="Industrial Plant Fabrication" class="parallax-image">
+            <div class="project-info-overlay">
+              <div class="container">
+                <div class="project-info-content">
+                  <span class="proj-category">Industrial</span>
+                  <h3>Heavy Factory Truss Systems</h3>
+                  <p>A multi-span industrial structure spanning over 120 meters, engineered for heavy gantry loads.</p>
+                  <a href="projects.html" class="btn btn-outline-accent" id="proj-show-btn-1">View Project Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="parallax-project-card reveal" id="proj-show-2">
+          <div class="project-parallax-wrapper">
+            <img src="images/industrial_facility.png" alt="Heavy Metal Engineering" class="parallax-image">
+            <div class="project-info-overlay">
+              <div class="container">
+                <div class="project-info-content">
+                  <span class="proj-category">Heavy Fabrication</span>
+                  <h3>Automated Industrial Silos</h3>
+                  <p>High-grade stainless and carbon steel bulk material storage silos with automated discharge cones.</p>
+                  <a href="projects.html" class="btn btn-outline-accent" id="proj-show-btn-2">View Project Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container text-center" style="margin-top: 60px;">
+        <a href="projects.html" class="btn btn-secondary" id="view-all-projects-btn">View All Projects</a>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="section stats-section" id="company-statistics">
+      <div class="container">
+        <div class="stats-grid stagger-container">
+          
+          <div class="stat-item stagger-item" id="stat-years">
+            <div class="stat-num" data-target="20">0</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+
+          <div class="stat-item stagger-item" id="stat-projects">
+            <div class="stat-num" data-target="500">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+
+          <div class="stat-item stagger-item" id="stat-clients">
+            <div class="stat-num" data-target="100">0</div>
+            <div class="stat-label">Happy Clients</div>
+          </div>
+
+          <div class="stat-item stagger-item" id="stat-tons">
+            <div class="stat-num" data-target="1000">0</div>
+            <div class="stat-label">Tons Fabricated</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section cta-section" id="home-cta">
+      <div class="container text-center">
+        <div class="reveal">
+          <h2 class="cta-title" id="home-cta-heading">Let's Build Something<br><span class="accent-text">Strong</span> Together.</h2>
+          <p class="cta-subtitle">Connect with our engineering experts to get a detailed technical estimate for your project requirements.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg" id="home-cta-btn">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-logo-col">
+          <img src="assets/vijay industries logo.jpg" alt="Vijay Industries Logo" style="height: 45px; width: auto; margin-bottom: 20px; object-fit: contain;">
+          <p>Precision steel fabrication and heavy engineering. Delivering premium structural solutions across India since 2003.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.3C6.43,18.45 4.58,19.13 2.58,19.13C2.23,19.13 1.9,19.11 1.57,19.07C3.47,20.29 5.72,21 8.14,21C16,21 20.33,14.5 20.33,8.84C20.33,8.65 20.33,8.46 20.31,8.28C21.15,7.67 21.88,6.88 22.46,6Z"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Vijay Steel</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#structural" id="footer-link-structural">Structural Fabrication</a></li>
+            <li><a href="services.html#industrial" id="footer-link-industrial">Industrial Engineering</a></li>
+            <li><a href="services.html#heavy" id="footer-link-heavy">Heavy Components</a></li>
+            <li><a href="services.html#custom" id="footer-link-custom">Custom Metal Works</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>DriveOn</h4>
+          <ul class="footer-links">
+            <li><a href="driveon.html#products" id="footer-link-driveon-trays">Music Trays</a></li>
+            <li><a href="driveon.html#products" id="footer-link-driveon-boxes">Woofer Boxes</a></li>
+            <li><a href="driveon.html#products" id="footer-link-driveon-armrests">Armrests</a></li>
+            <li><a href="driveon.html#products" id="footer-link-driveon-brackets">Side Brackets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="contact-info-list">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/></svg>
+              <span>Vijay Industries Complex, Phase II, Industrial Area, Bangalore, Karnataka, India</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+              <span>+91 80 4123 4567</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M17,17H7V15H17V17M17,13H7V11H17V13M17,9H7V7H17V9Z"/></svg>
+              <span>info@vijayindustries.in</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Vijay Industries. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" id="footer-privacy">Privacy Policy</a>
+          <a href="#" id="footer-terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top-btn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24"><path d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"/></svg>
+  </button>
+
+  <!-- Global scripts -->
+  <script src="js/global.js"></script>
+  <!-- Page specific scripts -->
+  <script src="js/home.js"></script>
+</body>
+</html>
