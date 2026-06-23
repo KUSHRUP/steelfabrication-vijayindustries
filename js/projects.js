@@ -67,6 +67,7 @@ function initPortfolio() {
     const tagEl = card.querySelector('.proj-card-tag');
     const titleEl = card.querySelector('.project-meta h3');
     const descEl = card.querySelector('.project-meta p');
+    const videoUrl = card.getAttribute('data-video-url');
 
     // Load into lightbox
     lightboxImg.src = imgEl.src;
@@ -74,6 +75,16 @@ function initPortfolio() {
     lightboxTag.textContent = tagEl.textContent;
     lightboxTitle.textContent = titleEl.textContent;
     lightboxDesc.textContent = descEl.textContent;
+
+    const lightboxVideoLink = document.getElementById('lightbox-video-link');
+    if (lightboxVideoLink) {
+      if (videoUrl) {
+        lightboxVideoLink.href = videoUrl;
+        lightboxVideoLink.style.display = 'inline-flex';
+      } else {
+        lightboxVideoLink.style.display = 'none';
+      }
+    }
 
     // Show modal
     lightbox.classList.add('active');
@@ -140,3 +151,5 @@ function initPortfolio() {
     }
   });
 }
+
+

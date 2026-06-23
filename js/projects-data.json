@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "name": "Heavy Duty Warehouse Framework",
+        "category": "Infrastructure",
+        "location": "Jabalpur, India",
+        "image": "https://images.unsplash.com/photo-1513828742140-ccaa34f3bfc1?auto=format&fit=crop&w=800&q=80",
+        "description": "Engineered and fabricated structural steel frameworks for a 50,000 sq.ft industrial logistics warehouse. Incorporates heavy-duty portal frames and high-tensile column brackets to support overhead crane loads.",
+        "year": "2024",
+        "client": "Logistics India Ltd",
+        "video": "https://www.youtube.com/embed/5F2v_7g9dCE"
+    },
+    {
+        "id": 2,
+        "name": "Cement Plant Pressure Piping",
+        "category": "Industrial",
+        "location": "Satna, India",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+        "description": "High-pressure, chemical-resistant carbon steel pipeline fabrication for a major cement kiln line expansion. Fully MIG welded, X-ray tested, and custom coated for extreme operational environments.",
+        "year": "2023",
+        "client": "Prism Cement Corp",
+        "video": "https://player.vimeo.com/video/586051778"
+    },
+    {
+        "id": 3,
+        "name": "Commercial Atrium Steel Truss",
+        "category": "Commercial",
+        "location": "Bhopal, India",
+        "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+        "description": "Architecturally exposed structural steel trusses and modern aesthetic supporting brackets for a high-end corporate headquarters atrium. Features seamless visual welds and high durability satin finish.",
+        "year": "2022",
+        "client": "Horizon Developers",
+        "video": "https://www.youtube.com/embed/5F2v_7g9dCE"
+    },
+    {
+        "id": 4,
+        "name": "Custom Laser Cut Machinery Enclosures",
+        "category": "Custom",
+        "location": "Richchai, Jabalpur",
+        "image": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?auto=format&fit=crop&w=800&q=80",
+        "description": "High-precision sheet metal fabrication and fiber laser cutting for dust-tight, soundproof industrial generator enclosures. Complete with powder coating and integrated exhaust ventilation baffles.",
+        "year": "2024",
+        "client": "Indo Power Systems",
+        "video": "https://player.vimeo.com/video/280036683"
+    },
+    {
+        "id": 5,
+        "name": "Industrial Walkways & Platform Structure",
+        "category": "Industrial",
+        "location": "Katni, India",
+        "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+        "description": "Safety-first heavy steel access platforms, stairs, and handrail systems for a mineral processing plant. Engineered to international safety standards, hot-dip galvanized for corrosion protection.",
+        "year": "2023",
+        "client": "Earth Minerals India",
+        "video": "https://www.youtube.com/embed/5F2v_7g9dCE"
+    },
+    {
+        "id": 6,
+        "name": "Architectural Decorative Steel Pillars",
+        "category": "Custom",
+        "location": "Indore, India",
+        "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+        "description": "Crafted ornamental structural column covers and cladding for an institutional building lobby. Engineered in Brushed Stainless Steel with hidden fasteners and seamless alignment panels.",
+        "year": "2024",
+        "client": "Elite Academy",
+        "video": ""
+    }
+]

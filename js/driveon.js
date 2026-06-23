@@ -131,3 +131,5 @@ function initProductSlider() {
   // Initialize
   startAutoPlay();
 }
+
+

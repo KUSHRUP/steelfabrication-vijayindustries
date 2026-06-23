@@ -327,3 +327,49 @@
   color: var(--color-light-steel);
   line-height: 1.5;
 }
+
+/* 5. Project Video Link */
+.project-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.project-video-link:hover {
+  color: var(--text-primary);
+}
+
+.project-video-link .video-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.project-video-link:hover .video-icon {
+  transform: scale(1.15);
+}
+
+/* Lightbox caption specific video link placement */
+.lightbox-caption .project-video-link {
+  margin-top: 18px;
+  align-self: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.lightbox-caption .project-video-link:hover {
+  color: var(--color-white);
+}
+
+

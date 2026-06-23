@@ -129,3 +129,5 @@ function initParallaxScroll() {
   // Initial check
   handleParallax();
 }
+
+
