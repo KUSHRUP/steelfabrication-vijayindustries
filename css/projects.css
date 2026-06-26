@@ -118,7 +118,7 @@
 .project-img-box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:contain;
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -372,4 +372,508 @@
   color: var(--color-white);
 }
 
+/* ==========================================================================
+   Project Card Action Buttons (See Here / Watch Video)
+   ========================================================================== */
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto; /* Push actions to the bottom of the card */
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
 
+.card-action-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.card-action-btn.btn-see-more {
+  color: var(--accent);
+}
+
+.card-action-btn.btn-see-more:hover {
+  color: var(--text-primary);
+}
+
+.card-action-btn.btn-watch-video {
+  color: var(--text-muted);
+}
+
+.card-action-btn.btn-watch-video:hover {
+  color: var(--accent);
+}
+
+.card-action-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.card-action-btn.btn-watch-video:hover svg {
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   E-commerce Style Detail Modal (Restructured Lightbox)
+   ========================================================================== */
+.modal-detail-container {
+  width: 92%;
+  max-width: 1050px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  max-height: 85vh;
+  overflow-y: auto;
+  z-index: 2001;
+  transform: scale(0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .modal-detail-container {
+  transform: scale(1);
+}
+
+.modal-detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+}
+
+@media (max-width: 991px) {
+  .modal-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-detail-media {
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  position: relative;
+  min-height: 380px;
+  border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 991px) {
+  .modal-detail-media {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px 15px;
+    min-height: auto;
+  }
+  gap: 20px;
+  z-index: 2001;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border: 1px solid var(--border-color);
+  transform: scale(0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .lightbox-image {
+  transform: scale(1);
+}
+
+.lightbox-caption {
+  text-align: center;
+  color: var(--color-white);
+  max-width: 600px;
+}
+
+.lightbox-tag {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lightbox-caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--color-white);
+}
+
+.lightbox-caption p {
+  font-size: 0.95rem;
+  color: var(--color-light-steel);
+  line-height: 1.5;
+}
+
+/* 5. Project Video Link */
+.project-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+}
+
+.project-video-link:hover {
+  color: var(--text-primary);
+}
+
+.project-video-link .video-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  transition: transform 0.3s ease;
+}
+
+.project-video-link:hover .video-icon {
+  transform: scale(1.15);
+}
+
+/* Lightbox caption specific video link placement */
+.lightbox-caption .project-video-link {
+  margin-top: 18px;
+  align-self: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.lightbox-caption .project-video-link:hover {
+  color: var(--color-white);
+}
+
+/* ==========================================================================
+   Project Card Action Buttons (See Here / Watch Video)
+   ========================================================================== */
+.project-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto; /* Push actions to the bottom of the card */
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.card-action-btn {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.card-action-btn.btn-see-more {
+  color: var(--accent);
+}
+
+.card-action-btn.btn-see-more:hover {
+  color: var(--text-primary);
+}
+
+.card-action-btn.btn-watch-video {
+  color: var(--text-muted);
+}
+
+.card-action-btn.btn-watch-video:hover {
+  color: var(--accent);
+}
+
+.card-action-btn svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.card-action-btn.btn-watch-video:hover svg {
+  transform: scale(1.15);
+}
+
+/* ==========================================================================
+   E-commerce Style Detail Modal (Restructured Lightbox)
+   ========================================================================== */
+.modal-detail-container {
+  width: 92%;
+  max-width: 1050px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Prevent container scroll on desktop */
+  z-index: 2001;
+  transform: scale(0.95);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal.active .modal-detail-container {
+  transform: scale(1);
+}
+
+.modal-detail-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  height: 100%;
+  max-height: 85vh;
+}
+
+@media (max-width: 991px) {
+  .modal-detail-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+  }
+}
+
+.modal-detail-media {
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  position: relative;
+  height: 100%;
+  max-height: 85vh;
+  border-right: 1px solid var(--border-color);
+}
+
+@media (max-width: 991px) {
+  .modal-detail-media {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 30px 15px;
+    height: auto;
+    max-height: none;
+  }
+}
+
+.modal-detail-media .lightbox-image {
+  max-width: 100%;
+  max-height: 55vh;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.06));
+}
+
+body.dark-theme .modal-detail-media .lightbox-image {
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.modal-detail-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-primary);
+  max-height: 85vh;
+  overflow-y: auto; /* Scroll info side on desktop */
+}
+
+/* Custom scrollbar for info panel */
+.modal-detail-info::-webkit-scrollbar {
+  width: 6px;
+}
+.modal-detail-info::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-detail-info::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+.modal-detail-info::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+@media (max-width: 991px) {
+  .modal-detail-container {
+    overflow-y: auto; /* Enable container scroll on mobile */
+  }
+  .modal-detail-info {
+    padding: 24px;
+    max-height: none;
+    overflow-y: visible; /* Disable scroll on info panel in mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-detail-info {
+    padding: 24px;
+  }
+}
+
+.modal-detail-info .lightbox-tag {
+  align-self: flex-start;
+  margin-bottom: 8px;
+}
+
+.modal-detail-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 576px) {
+  .modal-detail-title {
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+  }
+}
+
+.modal-section-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.modal-specs-section {
+  margin-bottom: 24px;
+}
+
+.modal-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 576px) {
+  .modal-specs-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+.modal-spec-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: var(--transition-fast);
+}
+
+.modal-spec-item:hover {
+  border-color: var(--accent);
+}
+
+.spec-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.spec-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-detail-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 24px 0;
+}
+
+.modal-description-section {
+  margin-bottom: 28px;
+}
+
+.modal-detail-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.modal-detail-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: auto;
+}
+
+@media (max-width: 576px) {
+  .modal-detail-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.modal-detail-actions .btn {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 0.82rem;
+}
+
+.modal-detail-actions .video-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Lightbox Modal overrides for E-commerce sizing */
+.lightbox-modal {
+  padding: 20px;
+}
+
+.lightbox-close {
+  top: 15px;
+  right: 25px;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .lightbox-close {
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: var(--shadow-sm);
+    top: 15px;
+    right: 15px;
+  }
+}

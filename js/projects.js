@@ -29,6 +29,51 @@ function initPortfolio() {
   };
   updateActiveCards();
 
+  // Inject action links ("See Here" & "Watch Video") dynamically into project cards
+  projectCards.forEach(card => {
+    const titleEl = card.querySelector('.project-meta h3');
+    const titleText = titleEl ? titleEl.textContent : 'Project';
+    const videoUrl = card.getAttribute('data-video-url');
+
+    const actionsDiv = document.createElement('div');
+    actionsDiv.className = 'project-card-actions';
+
+    // "See More" button
+    const seeMoreBtn = document.createElement('button');
+    seeMoreBtn.className = 'card-action-btn btn-see-more';
+    seeMoreBtn.innerHTML = 'See More';
+    seeMoreBtn.setAttribute('aria-label', `View details of ${titleText}`);
+    seeMoreBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const index = activeCards.indexOf(card);
+      if (index !== -1) {
+        openLightbox(index);
+      }
+    });
+    actionsDiv.appendChild(seeMoreBtn);
+
+    // "Watch Video" link (inserted in each project card, with fallback if not defined)
+    const finalCardVideoUrl = videoUrl || 'https://www.youtube.com/watch?v=y881t8ilMyc';
+    const watchVideoLink = document.createElement('a');
+    watchVideoLink.className = 'card-action-btn btn-watch-video';
+    watchVideoLink.href = finalCardVideoUrl;
+    watchVideoLink.target = '_blank';
+    watchVideoLink.rel = 'noopener noreferrer';
+    watchVideoLink.innerHTML = `
+      <svg viewBox="0 0 24 24"><path d="M10,16.5L16,12L10,7.5V16.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/></svg>
+      Watch Video
+    `;
+    watchVideoLink.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+    actionsDiv.appendChild(watchVideoLink);
+
+    const metaDiv = card.querySelector('.project-meta');
+    if (metaDiv) {
+      metaDiv.appendChild(actionsDiv);
+    }
+  });
+
   /* ==========================================================================
      1. Portfolio Filtering
      ========================================================================== */
@@ -55,7 +100,7 @@ function initPortfolio() {
   });
 
   /* ==========================================================================
-     2. Lightbox Modal Logic
+     2. Lightbox Modal Logic (E-commerce Details Viewer)
      ========================================================================== */
   const openLightbox = (index) => {
     currentIndex = index;
@@ -66,24 +111,64 @@ function initPortfolio() {
     const imgEl = card.querySelector('.project-img-box img');
     const tagEl = card.querySelector('.proj-card-tag');
     const titleEl = card.querySelector('.project-meta h3');
-    const descEl = card.querySelector('.project-meta p');
+    const shortDescEl = card.querySelector('.project-short-desc') || card.querySelector('.project-meta p');
     const videoUrl = card.getAttribute('data-video-url');
 
-    // Load into lightbox
+    // Parse description overrides
+    const fullDescEl = card.querySelector('.project-full-desc');
+    let fullDescText = '';
+    if (fullDescEl) {
+      fullDescText = fullDescEl.innerHTML.trim();
+    } else {
+      fullDescText = generateFallbackDescription(titleEl.textContent, tagEl.textContent, shortDescEl.textContent);
+    }
+
+    // Load static data
     lightboxImg.src = imgEl.src;
     lightboxImg.alt = imgEl.alt;
     lightboxTag.textContent = tagEl.textContent;
     lightboxTitle.textContent = titleEl.textContent;
-    lightboxDesc.textContent = descEl.textContent;
+    lightboxDesc.innerHTML = fullDescText;
 
+    // Load specs
+    let specsData = {};
+    const rawSpecs = card.getAttribute('data-specs');
+    if (rawSpecs) {
+      try {
+        specsData = JSON.parse(rawSpecs);
+      } catch (e) {
+        console.error("Failed to parse specifications JSON", e);
+      }
+    } else {
+      specsData = generateFallbackSpecs(titleEl.textContent, tagEl.textContent);
+    }
+
+    // Populate specs grid
+    const specsContainer = document.getElementById('modal-specs-container');
+    if (specsContainer) {
+      specsContainer.innerHTML = '';
+      for (const [key, value] of Object.entries(specsData)) {
+        const specItem = document.createElement('div');
+        specItem.className = 'modal-spec-item';
+        specItem.innerHTML = `
+          <span class="spec-label">${key}</span>
+          <span class="spec-value">${value}</span>
+        `;
+        specsContainer.appendChild(specItem);
+      }
+    }
+
+    // Dynamic inquiry parameter binding
+    const inquireBtn = document.getElementById('modal-inquire-btn');
+    if (inquireBtn) {
+      inquireBtn.href = `contact.html?project=${encodeURIComponent(titleEl.textContent)}`;
+    }
+
+    // Set video link actions (always show, use fallback if not defined)
     const lightboxVideoLink = document.getElementById('lightbox-video-link');
     if (lightboxVideoLink) {
-      if (videoUrl) {
-        lightboxVideoLink.href = videoUrl;
-        lightboxVideoLink.style.display = 'inline-flex';
-      } else {
-        lightboxVideoLink.style.display = 'none';
-      }
+      lightboxVideoLink.href = videoUrl || 'https://www.youtube.com/watch?v=y881t8ilMyc';
+      lightboxVideoLink.style.display = 'inline-flex';
     }
 
     // Show modal
@@ -150,6 +235,50 @@ function initPortfolio() {
       showPrev();
     }
   });
+}
+
+/**
+ * Dynamic fallback generators for clean technical specifications.
+ */
+function generateFallbackSpecs(title, category) {
+  const normCategory = category.trim().toLowerCase();
+  
+  if (normCategory.includes('infrastructure')) {
+    return {
+      "Material": "High-Strength Structural Steel (IS 2062)",
+      "Standard": "IRC Certified / MORTH Compliant",
+      "Durability": "Heavy-Duty Weathering Steel",
+      "Application": "Bridge, Highway & Public Works"
+    };
+  } else if (normCategory.includes('industrial')) {
+    return {
+      "Material": "Heavy-Gauge Structural Carbon Steel",
+      "Safety Factor": "1.5x Peak Load Capacity",
+      "Coating": "Anti-Rust Epoxy Primer + Polyurethane Paint",
+      "Testing": "NDT Weld Integrity Tested"
+    };
+  } else if (normCategory.includes('commercial')) {
+    return {
+      "Material": "Architectural Grade Steel (IS 2062)",
+      "Standard": "NBC (National Building Code) Certified",
+      "Durability": "High Corrosion Resistance finish",
+      "Application": "Retail, Office & Commercial framing"
+    };
+  } else { // Custom Fabrication
+    return {
+      "Material": "Specified Carbon Steel / Mild Steel Plate",
+      "Tolerances": "Precision fabricated to +/- 1.0mm",
+      "Design Support": "Custom fabricated to project drawings",
+      "Finish": "Hot-Dip Galvanized / Powder Coated"
+    };
+  }
+}
+
+/**
+ * Dynamic fallback generators for long product overview.
+ */
+function generateFallbackDescription(title, category, shortDesc) {
+  return `This professional-grade <strong>${title}</strong> is custom-engineered and fabricated to support heavy-duty operations in the <strong>${category}</strong> sector. Built utilizing high-strength structural steel, advanced welding technologies, and rigorous quality inspection processes, it ensures unmatched durability under extreme loading. <br><br>${shortDesc}<br><br>The design is fully optimized for structural efficiency, featuring standardized bolt patterns for swift on-site installation and a premium protective coating to withstand aggressive environmental exposure.`;
 }
 
 
