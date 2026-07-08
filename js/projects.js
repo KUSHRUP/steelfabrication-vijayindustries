@@ -246,30 +246,30 @@ function generateFallbackSpecs(title, category) {
   if (normCategory.includes('infrastructure')) {
     return {
       "Material": "High-Strength Structural Steel (IS 2062)",
-      "Standard": "IRC Certified / MORTH Compliant",
-      "Durability": "Heavy-Duty Weathering Steel",
+      "Dimensions": "Custom Fabricated",
+      "Surface Finish": "Anti-Corrosive Red Oxide Primer",
       "Application": "Bridge, Highway & Public Works"
     };
   } else if (normCategory.includes('industrial')) {
     return {
       "Material": "Heavy-Gauge Structural Carbon Steel",
-      "Safety Factor": "1.5x Peak Load Capacity",
-      "Coating": "Anti-Rust Epoxy Primer + Polyurethane Paint",
-      "Testing": "NDT Weld Integrity Tested"
+      "Dimensions": "Custom Fabricated",
+      "Surface Finish": "Anti-Rust Epoxy Primer + Polyurethane Paint",
+      "Application": "Industrial Equipment & Platform Support"
     };
   } else if (normCategory.includes('commercial')) {
     return {
       "Material": "Architectural Grade Steel (IS 2062)",
-      "Standard": "NBC (National Building Code) Certified",
-      "Durability": "High Corrosion Resistance finish",
+      "Dimensions": "Custom Fabricated",
+      "Surface Finish": "High Corrosion Resistance Paint/Powder Coating",
       "Application": "Retail, Office & Commercial framing"
     };
   } else { // Custom Fabrication
     return {
       "Material": "Specified Carbon Steel / Mild Steel Plate",
-      "Tolerances": "Precision fabricated to +/- 1.0mm",
-      "Design Support": "Custom fabricated to project drawings",
-      "Finish": "Hot-Dip Galvanized / Powder Coated"
+      "Dimensions": "Custom Fabricated to Drawings",
+      "Surface Finish": "Hot-Dip Galvanized / Powder Coated",
+      "Application": "Custom Metal Fabrication Solutions"
     };
   }
 }
