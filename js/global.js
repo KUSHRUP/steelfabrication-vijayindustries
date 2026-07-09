@@ -13,6 +13,7 @@ const VIJAY_CONFIG = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  handleLocalFileFallback();
   initPreloader();
   initThemeToggle();
   initHeaderScroll();
@@ -23,6 +24,30 @@ document.addEventListener('DOMContentLoaded', () => {
   initFooterModals();
   initContactForm();
 });
+
+// Helper to allow local filesystem (file://) browsing when clean URLs (.html removed) are used
+function handleLocalFileFallback() {
+  if (window.location.protocol === 'file:') {
+    document.querySelectorAll('a[href]').forEach(link => {
+      const href = link.getAttribute('href');
+      if (
+        href && 
+        !href.startsWith('http') && 
+        !href.startsWith('https') && 
+        !href.startsWith('mailto:') && 
+        !href.startsWith('tel:') && 
+        !href.startsWith('#') &&
+        !href.includes('.')
+      ) {
+        const parts = href.split('#');
+        if (parts[0]) {
+          parts[0] = parts[0] + '.html';
+          link.setAttribute('href', parts.join('#'));
+        }
+      }
+    });
+  }
+}
 
 /* ==========================================================================
    1. Preloader Screen
@@ -157,9 +182,12 @@ function initPageTransitions() {
       !link.getAttribute('target')
     ) {
       link.addEventListener('click', (e) => {
-        // Only run transition if the destination is different or not current
-        const currentLoc = window.location.pathname.split('/').pop() || 'index.html';
-        const targetLoc = href.split('/').pop();
+        // Normalize location paths by stripping .html and resolving defaults
+        const currentLoc = (window.location.pathname.split('/').pop() || 'index').replace('.html', '');
+        
+        // Extract base path for target page (ignoring hash links)
+        const targetPage = href.split('#')[0].split('/').pop();
+        const targetLoc = (targetPage || 'index').replace('.html', '');
         
         if (currentLoc !== targetLoc) {
           e.preventDefault();
