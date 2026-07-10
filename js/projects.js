@@ -85,7 +85,15 @@ function initPortfolio() {
     copyLinkBtn.setAttribute('aria-label', `Copy link to ${titleText}`);
     copyLinkBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const cleanUrl = window.location.href.split('#')[0].replace('.html', '');
+      let cleanUrl = window.location.href.split('#')[0];
+      if (!cleanUrl.includes('.html')) {
+        const queryIndex = cleanUrl.indexOf('?');
+        if (queryIndex !== -1) {
+          cleanUrl = cleanUrl.substring(0, queryIndex) + '.html' + cleanUrl.substring(queryIndex);
+        } else {
+          cleanUrl += '.html';
+        }
+      }
       const projectUrl = `${cleanUrl}#${card.id}`;
       navigator.clipboard.writeText(projectUrl).then(() => {
         showToast('Project link copied!');
@@ -294,7 +302,15 @@ function initPortfolio() {
     shareBtn.addEventListener('click', () => {
       const activeCard = activeCards[currentIndex];
       if (activeCard) {
-        const cleanUrl = window.location.href.split('#')[0].replace('.html', '');
+        let cleanUrl = window.location.href.split('#')[0];
+        if (!cleanUrl.includes('.html')) {
+          const queryIndex = cleanUrl.indexOf('?');
+          if (queryIndex !== -1) {
+            cleanUrl = cleanUrl.substring(0, queryIndex) + '.html' + cleanUrl.substring(queryIndex);
+          } else {
+            cleanUrl += '.html';
+          }
+        }
         const shareUrl = `${cleanUrl}#${activeCard.id}`;
         navigator.clipboard.writeText(shareUrl).then(() => {
           showToast('Project link copied to clipboard!');
