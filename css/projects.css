@@ -621,13 +621,35 @@ body.dark-theme .modal-detail-media .lightbox-image {
   margin: 24px 0;
 }
 
+.modal-overview-section {
+  margin-bottom: 24px;
+  background-color: var(--bg-secondary);
+  border-left: 3px solid var(--accent);
+  padding: 16px 20px;
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+.modal-overview-section .modal-section-title {
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.modal-detail-overview {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
 .modal-description-section {
   margin-bottom: 28px;
+  padding: 0 4px;
 }
 
 .modal-detail-desc {
   font-size: 0.92rem;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text-secondary);
 }
 

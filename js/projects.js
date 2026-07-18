@@ -25,6 +25,7 @@ function initPortfolio() {
   const lightboxTag = document.getElementById('lightbox-tag-span');
   const lightboxTitle = document.getElementById('lightbox-title-h3');
   const lightboxDesc = document.getElementById('lightbox-desc-p');
+  const lightboxOverview = document.getElementById('lightbox-overview-p');
   
   const closeBtn = document.getElementById('lightbox-close-btn');
   const prevBtn = document.getElementById('lightbox-prev-btn');
@@ -179,6 +180,9 @@ function initPortfolio() {
     lightboxImg.alt = imgEl.alt;
     lightboxTag.textContent = tagEl.textContent;
     lightboxTitle.textContent = titleEl.textContent;
+    if (lightboxOverview && shortDescEl) {
+      lightboxOverview.innerHTML = shortDescEl.innerHTML || shortDescEl.textContent;
+    }
     lightboxDesc.innerHTML = fullDescText;
 
     // Load specs
